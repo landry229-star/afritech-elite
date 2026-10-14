@@ -1,66 +1,76 @@
-# AfriTech Elite
+AfriTech Elite
+Site vitrine Next.js en français pour présenter les services d’AfriTech Elite : création de sites web pour professionnels et cours particuliers de mathématiques au Bénin.
 
-Landing page Next.js en français pour présenter les offres de création de sites web et les cours de mathématiques d’AfriTech Elite.
+Sommaire
+Démarrage local
+Configuration
+Pages et fonctionnalités
+Déploiement sur Render
+SEO
+PWA et mode hors connexion
+Démarrage local
+Prérequis : Node.js et npm.
 
-## Démarrage local
 
-```bash
-npm install
-cp .env.example .env.local
-```
+Ouvrez ensuite http://localhost:3000.
 
-Renseignez `NEXT_PUBLIC_WHATSAPP_NUMBER` dans `.env.local` avec le numéro WhatsApp au format international, sans `+`, espace ni tiret (8 à 15 chiffres). Tant que la variable est absente ou invalide, les liens de contact renvoient aux instructions de configuration. Les boutons des offres préparent un message WhatsApp qui précise l’offre choisie.
+Pour vérifier la version de production en local :
 
-Sur la page `/contact`, le formulaire envoie les demandes au endpoint Formspree configuré. Vérifiez dans le tableau de bord Formspree que le formulaire `xldkjyko` est actif et que l’adresse destinataire est confirmée. WhatsApp utilise `NEXT_PUBLIC_WHATSAPP_NUMBER`. Pour afficher aussi les boutons email, téléphone et LinkedIn, renseignez respectivement `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_CONTACT_PHONE` et `NEXT_PUBLIC_CONTACT_LINKEDIN` avec vos coordonnées réelles dans `.env.local` et dans l’environnement Render. Les canaux non configurés ou invalides ne sont pas affichés ; les coordonnées ne sont pas écrites en clair dans les libellés des boutons.
 
-En développement, les métadonnées canoniques et les routes `robots.txt` / `sitemap.xml` utilisent automatiquement `http://localhost:3000` si aucune URL n’est configurée. En production, définissez `NEXT_PUBLIC_SITE_URL` avec l’URL publique HTTPS complète du site. Sur Render, récupérez l’URL `onrender.com`, ajoutez-la comme valeur de `NEXT_PUBLIC_SITE_URL`, puis redéployez pour que les métadonnées utilisent le bon domaine. `RENDER_EXTERNAL_URL` reste utilisé comme solution de repli. Ne configurez pas une URL locale en production.
+Configuration
+Les variables d’environnement sont définies dans .env.local en développement. En production, configurez-les dans les paramètres du service Render, puis redéployez le site.
 
-```bash
-npm run dev
-```
+Variable	Rôle
+NEXT_PUBLIC_WHATSAPP_NUMBER	Numéro WhatsApp au format international, uniquement des chiffres — sans +, espaces ni tirets.
+NEXT_PUBLIC_SITE_URL	URL publique complète du site, par exemple https://mon-site.onrender.com.
+NEXT_PUBLIC_CONTACT_EMAIL	Adresse e-mail affichée comme moyen de contact, si renseignée.
+NEXT_PUBLIC_CONTACT_PHONE	Numéro d’appel affiché comme moyen de contact, si renseigné.
+NEXT_PUBLIC_CONTACT_LINKEDIN	URL du profil LinkedIn, si renseignée.
+Vérifiez que les coordonnées indiquées sont bien les vôtres avant de publier le site. Sur la page Contact, les canaux facultatifs non configurés ou invalides ne sont pas affichés.
 
-Ouvrez ensuite http://localhost:3000. Pour préparer une version de production, utilisez `npm run build`, puis `npm start`.
+Formulaire de contact
+Le formulaire de la page /contact transmet les demandes à Formspree via l’endpoint configuré dans le site. Vérifiez dans le tableau de bord Formspree que le formulaire est actif et que l’adresse destinataire est confirmée.
 
-## Pages
+Le formulaire recueille le nom, l’adresse e-mail, le sujet et le message ; le téléphone est facultatif. Les visiteurs doivent éviter d’y transmettre des informations confidentielles.
 
-- **Accueil** (`/`) : Page de présentation des services de création de sites web, des cours de mathématiques, et du processus de projet.
-- **Contact** (`/contact`) : Page dédiée avec canaux de communication multiples (email, WhatsApp, téléphone, LinkedIn, portfolio) et FAQ.
+Pages et fonctionnalités
+Accueil — /
+La page d’accueil présente les services, les cours de mathématiques, les formules et le déroulement d’un projet. Elle comprend également :
 
-La section Aperçus contient trois concepts fictifs dessinés directement dans la page ; ils sont identifiés comme exemples et ne doivent pas être présentés comme des réalisations clients. Remplacez-les par des projets réels et autorisés dès que vous disposez d'un portfolio.
+une section portfolio avec des aperçus de sites ;
+un lien vers le portfolio de Landry ;
+une illustration animée en arrière-plan de la section d’accueil ;
+des animations discrètes au défilement et sur les cartes.
+Les aperçus de sites sont des concepts de démonstration : ils ne doivent pas être présentés comme des réalisations clients.
 
-Les formules définissent un périmètre de départ sans publier de tarif. Avant toute vente, confirmez que le nombre de pages, les livrables et les limites affichés correspondent à votre offre effective. Domaine, hébergement et maintenance ne sont pas annoncés comme inclus.
+Contact — /contact
+La page Contact contient le formulaire Formspree, les moyens de contact configurés et une foire aux questions.
 
-La section Cours de mathématiques présente les niveaux du collège (6e à 3e) et du lycée (2nde à Terminale), selon le programme béninois, ainsi que la préparation aux devoirs et examens (BEPC et BAC). Elle décrit une méthode fondée sur le repérage des besoins, des explications progressives, des exercices corrigés et le suivi des notions à revoir. Les cours sont proposés à domicile ou à distance ; disponibilités et modalités sont à convenir avec l’enseignant. Aucun tarif ni résultat scolaire garanti n’est annoncé.
+Cours de mathématiques
+La section dédiée présente l’accompagnement en mathématiques de la 6e à la Terminale, selon le programme béninois, notamment pour la préparation au BEPC et au BAC. Les objectifs, le format des séances, les disponibilités et les modalités sont à convenir avec l’enseignant. Aucun résultat scolaire n’est garanti.
 
-Le site inclut aussi des métadonnées de partage social, une image Open Graph, des données structurées Schema.org pour l’organisation, la création de sites et les cours, ainsi que des routes dynamiques pour `robots.txt` et `sitemap.xml`.
+Déploiement sur Render
+Le projet contient un fichier render.yaml pour configurer le service. Pour le déployer :
 
-## Déploiement sur Render
+Connectez votre dépôt Git à Render.
+Créez ou configurez un service Web à partir du dépôt.
+Vérifiez les commandes de construction et de démarrage définies dans render.yaml.
+Configurez les variables d’environnement nécessaires, en particulier NEXT_PUBLIC_WHATSAPP_NUMBER et NEXT_PUBLIC_SITE_URL.
+Lancez le déploiement.
+Définissez NEXT_PUBLIC_SITE_URL avec l’URL publique HTTPS du site, par exemple https://mon-site.onrender.com. Cette URL sert aux métadonnées, au sitemap et au fichier robots.txt. Les variables NEXT_PUBLIC_* doivent être disponibles pendant la construction de l’application ; après leur modification, relancez un déploiement.
 
-### Configuration
+Render fournit HTTPS pour les services Web. La disponibilité et le temps de démarrage dépendent du service et du plan choisis.
 
-Le projet inclut un fichier `render.yaml` pour déploiement simplifié sur Render.
+SEO
+Le site inclut des métadonnées pour les pages, le partage sur les réseaux sociaux, une image Open Graph ainsi que des routes pour :
 
-1. **Créer un compte Render** et authentifier votre dépôt Git.
-2. **Créer un nouveau service Web** dans le tableau de bord Render.
-3. **Connecter votre dépôt** et sélectionner la branche à déployer.
-4. **Configurer les variables d'environnement** :
-   - `NEXT_PUBLIC_WHATSAPP_NUMBER` : numéro WhatsApp au format international
-   - `NEXT_PUBLIC_SITE_URL` : URL publique HTTPS du service (ex: `https://afritech-elite.onrender.com`)
-5. **Déployer** : Render exécutera automatiquement `npm run build` et `npm start`.
+/robots.txt
+/sitemap.xml
+En local, l’URL du site est déterminée automatiquement. En production, configurez NEXT_PUBLIC_SITE_URL avec le domaine public réel.
 
-### URL publique et SEO
+PWA et mode hors connexion
+Le site dispose d’un manifeste installable, d’icônes adaptées aux appareils et d’un service worker. Après une première visite en ligne, celui-ci met en cache certaines pages et ressources, dont l’illustration d’accueil, pour faciliter l’accès hors connexion.
 
-Une fois déployé, Render génère une URL publique du type `https://<service-name>.onrender.com`. Cette URL doit être configurée dans `NEXT_PUBLIC_SITE_URL` pour que :
-- Les balises canoniques et de partage social pointent vers le bon domaine
-- Le sitemap et robots.txt soient correctement indexés par les moteurs de recherche
-- L'image Open Graph apparaisse correctement dans les aperçus
+Les services externes — comme WhatsApp, Formspree et le portfolio — nécessitent une connexion Internet. L’installation de la PWA et le service worker requièrent HTTPS en production ; localhost est pris en charge en développement.
 
-### Notes sur le déploiement
-
-- Le plan gratuit de Render peut prendre 30–50 secondes au premier lancement après une période d'inactivité.
-- Render fournit HTTPS automatiquement, ce qui est nécessaire pour PWA et les installations de service worker.
-- Les variables d'environnement doivent être redéployées après modification pour être prises en compte.
-
-## Application web progressive (PWA)
-
-Le site propose un manifeste installable, des icônes adaptées aux appareils, un bouton d’installation sur les navigateurs compatibles et un mode hors connexion de base. Après une première visite en ligne, le service worker met en cache la page d’accueil, la page hors connexion, l’illustration animée d’accueil, les icônes et les ressources statiques Next.js. WhatsApp et les ressources externes nécessitent une connexion. Le service worker et l’installation PWA nécessitent HTTPS en production (Render fournit HTTPS) ; localhost est accepté pour le développement.
+Les animations sont réduites ou désactivées si le visiteur a activé le réglage « Réduire les animations » sur son appareil.
