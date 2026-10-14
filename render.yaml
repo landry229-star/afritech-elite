@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: afritech-elite
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NEXT_PUBLIC_WHATSAPP_NUMBER
+        scope: build
+        value:   2290161896988
+      - key: NEXT_PUBLIC_SITE_URL
+        scope: build
+        value: # Sera automatiquement remplacé par RENDER_EXTERNAL_URL en production
