@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: afritech-elite
+    name: afribenin-tech
     env: node
     plan: free
     buildCommand: npm run build
