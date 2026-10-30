@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import PwaControls from "./PwaControls";
 import ScrollReveal from "./ScrollReveal";
+import ThemeToggle from "./ThemeToggle";
+import MobileNav from "./MobileNav";
 
 const sectors = [
   { icon: "🍽️", title: "Restaurant", description: "Menu, horaires et réservation.", portfolio: true },
@@ -213,9 +215,26 @@ export default function Home() {
             <a href="#portfolio">Portfolio</a>
             <a href="#etapes">Projet de site</a>
             <a href="#faq">FAQ</a>
+          </div>
+          <div className="nav-actions">
+            <ThemeToggle />
             <a className="button nav-cta" href="#contact">
-              Parler de mon projet
+              <span className="nav-cta-full">Parler de mon projet</span>
+              <span className="nav-cta-short">Mon projet</span>
             </a>
+            <MobileNav>
+              <a href="#solutions">Nos solutions</a>
+              <a href="#cours-mathematiques">Cours de maths</a>
+              <a href="#metiers">Les métiers</a>
+              <a href="#portfolio">Portfolio</a>
+              <a href="#etapes">Projet de site</a>
+              <a href="#offres">Nos offres</a>
+              <a href="#faq">FAQ</a>
+              <a href="https://portfoliolandry.netlify.app/" target="_blank" rel="noopener noreferrer">
+                Portfolio en ligne
+              </a>
+              <a href="/contact">Nous contacter</a>
+            </MobileNav>
           </div>
         </nav>
       </header>
@@ -254,14 +273,9 @@ export default function Home() {
             </div>
             <div className="grid math-level-grid">
               <article className="benefit">
-                <span className="benefit-mark math-level-mark" aria-hidden="true">6e–3e</span>
+                <span className="benefit-mark math-level-mark" aria-hidden="true">Sixième en Terminale</span>
                 <h3>Collège</h3>
                 <p>Accompagnement en mathématiques de la Sixième à la Troisième, avec préparation aux devoirs et au BEPC.</p>
-              </article>
-              <article className="benefit">
-                <span className="benefit-mark math-level-mark" aria-hidden="true">2nde–Tle</span>
-                <h3>Collège</h3>
-                <p>Accompagnement de la Seconde à la Terminale, avec préparation aux devoirs et au BAC.</p>
               </article>
             </div>
             <div className="section-heading math-method-heading">
@@ -519,14 +533,6 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-inner wrap">
           <p><strong>AfriTech Elite</strong> — Sites web pour commerçants, artisans et indépendants. © {new Date().getFullYear()}</p>
-          <div className="footer-links">
-            <a href="#metiers">Les métiers</a>
-            <a href="#etapes">Projet de site web</a>
-            <a href="#faq">FAQ</a>
-            <a href="#cours-mathematiques">Cours de maths</a>
-            <a href="https://portfoliolandry.netlify.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
-            <a href="/contact">Nous contacter</a>
-          </div>
         </div>
       </footer>
     </>

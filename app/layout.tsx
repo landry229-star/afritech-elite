@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import WhatsAppButton from "./WhatsAppButton";
 import "./globals.css";
 
 const siteUrl =
@@ -107,8 +108,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var t=localStorage.getItem("afritech-elite-theme");document.documentElement.dataset.theme=t==="dark"?"dark":"light"}catch{document.documentElement.dataset.theme="light"}',
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -116,6 +123,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

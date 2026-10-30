@@ -34,6 +34,11 @@ Le formulaire de la page /contact transmet les demandes à Formspree via l’end
 Le formulaire recueille le nom, l’adresse e-mail, le sujet et le message ; le téléphone est facultatif. Les visiteurs doivent éviter d’y transmettre des informations confidentielles.
 
 Pages et fonctionnalités
+
+Le bouton « Mode sombre » / « Mode clair » dans la navigation permet de choisir l’apparence du site. Le choix est mémorisé sur l’appareil et reste actif entre les pages.
+
+Un bouton WhatsApp flottant est affiché sur toutes les pages si `NEXT_PUBLIC_WHATSAPP_NUMBER` contient un numéro valide ; il ouvre une conversation avec un message prérempli.
+
 Accueil — /
 La page d’accueil présente les services, les cours de mathématiques, les formules et le déroulement d’un projet. Elle comprend également :
 

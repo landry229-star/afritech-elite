@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getSiteUrl } from "@/lib/site-url";
 import ScrollReveal from "../ScrollReveal";
+import ThemeToggle from "../ThemeToggle";
+import MobileNav from "../MobileNav";
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = getSiteUrl();
@@ -142,7 +144,24 @@ export default function ContactPage() {
             <Link href="/">Accueil</Link>
             <Link href="/#solutions">Nos solutions</Link>
             <Link href="/#cours-mathematiques">Cours de maths</Link>
-            <Link className="button nav-cta" href="#contact-methods">Nous contacter</Link>
+          </div>
+          <div className="nav-actions">
+            <ThemeToggle />
+            <Link className="button nav-cta" href="#contact-methods">
+              <span className="nav-cta-full">Nous contacter</span>
+              <span className="nav-cta-short">Contact</span>
+            </Link>
+            <MobileNav>
+              <Link href="/">Accueil</Link>
+              <Link href="/#solutions">Nos solutions</Link>
+              <Link href="/#cours-mathematiques">Cours de maths</Link>
+              <Link href="/#metiers">Les métiers</Link>
+              <Link href="/#portfolio">Portfolio</Link>
+              <Link href="https://portfoliolandry.netlify.app/" target="_blank" rel="noopener noreferrer">
+                Portfolio en ligne
+              </Link>
+              <Link href="/contact">Nous contacter</Link>
+            </MobileNav>
           </div>
         </nav>
       </header>
@@ -365,12 +384,6 @@ export default function ContactPage() {
           <p>
             <strong>AfriTech Elite</strong> — Sites web pour commerçants, artisans et indépendants. © {new Date().getFullYear()}
           </p>
-          <div className="footer-links">
-            <a href="/">Accueil</a>
-            <a href="/#metiers">Les métiers</a>
-            <a href="/#cours-mathematiques">Cours de maths</a>
-            <a href="/contact">Contact</a>
-          </div>
         </div>
       </footer>
     </>
