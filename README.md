@@ -74,7 +74,7 @@ Le site inclut des métadonnées pour les pages, le partage sur les réseaux soc
 En local, l’URL du site est déterminée automatiquement. En production, configurez NEXT_PUBLIC_SITE_URL avec le domaine public réel.
 
 PWA et mode hors connexion
-Le site dispose d’un manifeste installable, d’icônes adaptées aux appareils et d’un service worker. Après une première visite en ligne, celui-ci met en cache certaines pages et ressources, dont l’illustration d’accueil, pour faciliter l’accès hors connexion.
+Le logo complet AfriTech Elite est affiché dans l’en-tête du site, avec son nom à côté. Le site dispose aussi d’un manifeste installable, d’icônes adaptées aux appareils créées à partir du logo, et d’un service worker. Après une première visite en ligne, celui-ci met en cache certaines pages et ressources, dont les icônes et l’illustration d’accueil, pour faciliter l’accès hors connexion.
 
 Les services externes — comme WhatsApp, Formspree et le portfolio — nécessitent une connexion Internet. L’installation de la PWA et le service worker requièrent HTTPS en production ; localhost est pris en charge en développement.
 

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import PwaControls from "./PwaControls";
 import ScrollReveal from "./ScrollReveal";
 import ThemeToggle from "./ThemeToggle";
@@ -121,49 +122,49 @@ const offers = [
 
 const questions = [
   {
-    question: "Que comprend chaque formule ?",
+    question: "Quel est le prix de création d’un site web ?",
     answer:
-      "Le site essentiel comprend une page structurée, les informations fournies sur votre activité et un affichage adapté au mobile. Le site professionnel prévoit jusqu’à cinq pages et peut inclure une galerie selon le besoin. Le devis précise les pages, contenus, fonctionnalités et ajustements inclus.",
+      "Le prix dépend de votre activité, du nombre de pages et des fonctionnalités souhaitées. Après un échange sur votre besoin, nous vous remettons un devis détaillé avant le démarrage.",
   },
   {
-    question: "Combien coûte la création d’un site ?",
+    question: "L’hébergement, le nom de domaine et la maintenance sont-ils compris dans le prix ?",
     answer:
-      "Le tarif est établi sur devis après un échange sur votre activité, le nombre de pages et les fonctionnalités souhaitées. Le montant et les éventuels frais récurrents sont communiqués avant toute validation.",
+      "Ces éléments ne sont pas automatiquement inclus. Le devis précise s’ils sont nécessaires, qui en assure la prise en charge et les coûts éventuels.",
   },
   {
-    question: "L’hébergement, le nom de domaine et la maintenance sont-ils inclus ?",
+    question: "Combien de temps faut-il pour créer et mettre en ligne le site ?",
     answer:
-      "Ils ne sont pas automatiquement inclus dans les formules présentées. Le devis indique clairement s’ils sont nécessaires, qui les prend en charge et leurs coûts éventuels.",
+      "Le délai dépend du contenu et des fonctionnalités du projet, ainsi que de la réception des éléments nécessaires. Une estimation vous est communiquée après la définition du projet.",
   },
   {
-    question: "Combien de temps faut-il pour créer mon site ?",
+    question: "Quelles informations et quels éléments dois-je fournir pour commencer ?",
     answer:
-      "Le délai dépend du contenu, des fonctionnalités et des éléments que vous fournissez. Un délai estimatif vous est indiqué après la définition du projet.",
-  },
-  {
-    question: "Que dois-je fournir pour commencer ?",
-    answer:
-      "En général, il faut les informations sur votre activité, vos services et vos coordonnées. Votre logo et vos photos peuvent aussi être utiles. La liste des éléments nécessaires est précisée au démarrage.",
-  },
-  {
-    question: "Puis-je demander un site pour un métier qui n’est pas dans la liste ?",
-    answer:
-      "Oui. Les secteurs affichés sont des exemples. Contactez-nous pour discuter de votre activité et de ce que vous souhaitez présenter.",
+      "Il faut généralement les informations sur votre activité, vos services et vos coordonnées. Votre logo et vos photos peuvent aussi être utiles. Nous préciserons ensemble les éléments nécessaires au démarrage.",
   },
   {
     question: "Le site sera-t-il adapté aux téléphones ?",
     answer:
-      "L’affichage sur téléphone est pris en compte dans le projet et vérifié avant la mise en ligne. Les caractéristiques exactes sont confirmées dans la proposition.",
+      "Oui. L’affichage sur téléphone est pris en compte dans le projet et vérifié avant la mise en ligne. Les caractéristiques prévues sont précisées dans la proposition.",
   },
   {
-    question: "Le site m’appartiendra-t-il ?",
+    question: "Le site m’appartiendra-t-il et pourrai-je le modifier moi-même ?",
     answer:
-      "Les conditions de propriété et de livraison sont expliquées dans la proposition avant le début du travail, afin que vous sachiez précisément ce qui est inclus.",
+      "Les conditions de propriété et de livraison sont précisées dans la proposition. Les possibilités de modification dépendent de la solution retenue et sont clarifiées avant le démarrage.",
   },
   {
-    question: "Pourrai-je modifier le site moi-même ?",
+    question: "Pouvez-vous créer un site pour mon métier ?",
     answer:
-      "Les possibilités de modification dépendent de la solution choisie. Les options d’autonomie et d’accompagnement sont présentées avant le démarrage.",
+      "Oui. Les métiers affichés sont des exemples ; nous pouvons échanger sur votre activité, vos besoins et les informations que vous souhaitez présenter.",
+  },
+  {
+    question: "Pour quelles classes proposez-vous les cours de mathématiques ?",
+    answer:
+      "Les cours sont proposés selon le programme béninois, de la Sixième à la Terminale, avec un accompagnement adapté à la classe et aux notions à travailler.",
+  },
+  {
+    question: "Les cours de maths se font-ils à domicile ou à distance ?",
+    answer:
+      "Les cours peuvent se dérouler à domicile ou à distance. Le format, les disponibilités et les modalités sont à convenir ensemble.",
   },
 ];
 
@@ -205,8 +206,9 @@ export default function Home() {
       <ScrollReveal />
       <header className="site-header">
         <nav className="nav wrap" aria-label="Navigation principale">
-          <a className="brand" href="#accueil">
-            AfriTech Elite
+          <a className="brand" href="#accueil" aria-label="AfriTech Elite — Accueil">
+            <Image className="brand-logo" src="/afritech-elite-logo.jpg" alt="" width={1408} height={768} />
+            <span className="brand-name">AfriTech Elite</span>
           </a>
           <div className="nav-links">
             <a href="#solutions">Nos solutions</a>
@@ -273,9 +275,12 @@ export default function Home() {
             </div>
             <div className="grid math-level-grid">
               <article className="benefit">
-                <span className="benefit-mark math-level-mark" aria-hidden="true">Sixième en Terminale</span>
-                <h3>Collège</h3>
-                <p>Accompagnement en mathématiques de la Sixième à la Troisième, avec préparation aux devoirs et au BEPC.</p>
+                <span className="benefit-mark math-level-mark" aria-hidden="true">6e–Tle</span>
+                <h3>De la Sixième à la Terminale</h3>
+                <p>
+                  Accompagnement en mathématiques au collège et au lycée, avec préparation aux devoirs,
+                  au BEPC et au BAC.
+                </p>
               </article>
             </div>
             <div className="section-heading math-method-heading">
@@ -498,7 +503,7 @@ export default function Home() {
             <div className="section-heading">
               <p className="eyebrow">Questions fréquentes</p>
               <h2>Avant de vous lancer</h2>
-              <p>Les détails exacts dépendent de votre projet et sont clarifiés dans la proposition.</p>
+              <p>Retrouvez les réponses sur la création de sites web et les cours de mathématiques.</p>
             </div>
             <div className="faq-list">
               {questions.map((item) => (

@@ -1,10 +1,12 @@
-const CACHE_NAME = "afritech-elite-v2";
+const CACHE_NAME = "afritech-elite-v3";
 const APP_SHELL = [
   "/",
   "/offline",
   "/hero-background.svg",
+  "/favicon-32.png",
   "/pwa-192.png",
   "/pwa-512.png",
+  "/pwa-maskable-512.png",
   "/apple-touch-icon.png",
   "/manifest.webmanifest",
 ];

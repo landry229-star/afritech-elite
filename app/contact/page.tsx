@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getSiteUrl } from "@/lib/site-url";
 import ScrollReveal from "../ScrollReveal";
@@ -139,7 +140,10 @@ export default function ContactPage() {
       <ScrollReveal />
       <header className="site-header">
         <nav className="nav wrap" aria-label="Navigation principale">
-          <Link className="brand" href="/">AfriTech Elite</Link>
+          <Link className="brand" href="/" aria-label="AfriTech Elite — Accueil">
+            <Image className="brand-logo" src="/afritech-elite-logo.jpg" alt="" width={1408} height={768} />
+            <span className="brand-name">AfriTech Elite</span>
+          </Link>
           <div className="nav-links">
             <Link href="/">Accueil</Link>
             <Link href="/#solutions">Nos solutions</Link>
