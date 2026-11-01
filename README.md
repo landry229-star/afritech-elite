@@ -42,11 +42,11 @@ Un bouton WhatsApp flottant est affiché sur toutes les pages si `NEXT_PUBLIC_WH
 Accueil — /
 La page d’accueil présente les services, les cours de mathématiques, les formules et le déroulement d’un projet. Elle comprend également :
 
-une section portfolio avec des aperçus de sites ;
+une section « Imaginez votre activité en ligne » avec sept modèles interactifs : boutique, clinique, école, hôtel, immobilier, pharmacie et restaurant. Ils sont servis depuis `public/modeles/` et s’ouvrent dans un nouvel onglet ;
 un lien vers le portfolio de Landry ;
 une illustration animée en arrière-plan de la section d’accueil ;
 des animations discrètes au défilement et sur les cartes.
-Les aperçus de sites sont des concepts de démonstration : ils ne doivent pas être présentés comme des réalisations clients.
+Les modèles sont des démonstrations, pas des réalisations clients. Les contenus, prix, coordonnées et disponibilités sont fictifs ou à vérifier. Les formulaires ne doivent pas être utilisés comme commandes, réservations, admissions ou rendez-vous confirmés. Le numéro WhatsApp du modèle restaurant est désactivé dans la copie publiée.
 
 Contact — /contact
 La page Contact contient le formulaire Formspree, les moyens de contact configurés et une foire aux questions.

@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f4ec" />
+    <meta
+      name="description"
+      content="Découvrez Maison Naya, une table de démonstration inspirée des maquis et restaurants de Cotonou : alloco, poulet et poisson braisés, repas à partager."
+    />
+    <title>Maison Naya — Braises, alloco & partage à Cotonou</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/modeles/return.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <nav class="afritech-return" aria-label="Retour au site principal">
+      <a href="/">← Retour au site AfriTech Elite</a>
+    </nav>
+    
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Navigation principale">
+        <a class="brand" href="#accueil" aria-label="Maison Naya, accueil">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>MAISON <b>NAYA</b><small>CUISINE & HOSPITALITÉ</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Ouvrir le menu</span>
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#histoire">Notre histoire</a>
+          <a href="#menu">La carte</a>
+          <a href="#commande">Commander</a>
+          <a href="#experience">L’expérience</a>
+          <a href="#visite">Nous trouver</a>
+          <a class="button button-dark nav-book" href="#reservation">Réserver une table <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenu">
+      <section class="hero" id="accueil">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1681936475555-ed2efb85a2f6?auto=format&fit=crop&w=2200&q=85"
+          alt="Des convives réunis autour d’un repas partagé"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content shell">
+          <p class="eyebrow eyebrow-light">  Haie Vive · Cotonou · Bénin</p>
+          <h1>Les saveurs d’ici,<br /><em>à partager autrement.</em></h1>
+          <p class="hero-copy">
+            À Cotonou, les braises crépitent, l’alloco se partage et les plats arrivent au milieu
+            des conversations. Prenez place, on s’occupe du reste.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#menu">Découvrir la carte <span aria-hidden="true">↓</span></a>
+            <a class="hero-text-link" href="#reservation">Réserver une table <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-signature">  UNE MAISON DE GOÛT ET DE RENCONTRES</div>
+        </div>
+        <a class="hero-scroll" href="#histoire" aria-label="Défiler vers la suite">↓</a>
+      </section>
+
+      <section class="intro section-pad" id="histoire">
+        <div class="shell intro-grid">
+          <div class="intro-heading">
+            <p class="eyebrow">  Bienvenue chez nous</p>
+            <h2>Une table ancrée<br />dans <em>son époque.</em></h2>
+            <div class="short-rule"></div>
+          </div>
+          <div class="intro-copy">
+            <p class="lead">
+              Chez Maison Naya, nous célébrons les saveurs du Bénin avec curiosité, respect
+              et une touche contemporaine.
+            </p>
+            <p>
+              De l’alloco encore chaud au poisson braisé, notre carte de démonstration s’inspire
+              des repas que l’on aime partager à Cotonou : une table généreuse, des sauces à part
+              et le temps de profiter des siens.
+            </p>
+            <a class="text-link" href="#experience">L’esprit de la maison <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section-pad" id="menu">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow"> Fait maison, avec attention</p>
+            <h2>La carte <em>du moment</em></h2>
+            <p>Alloco, wagasi, poulet et poisson à la braise : une carte de démonstration inspirée des tables et maquis de Cotonou.</p>
+          </div>
+
+          <div class="menu-filters" role="group" aria-label="Filtrer la carte">
+            <button class="menu-filter is-active" type="button" data-menu-filter="all" aria-pressed="true">Toute la carte</button>
+            <button class="menu-filter" type="button" data-menu-filter="entrees" aria-pressed="false">À partager</button>
+            <button class="menu-filter" type="button" data-menu-filter="plats" aria-pressed="false">Plats</button>
+            <button class="menu-filter" type="button" data-menu-filter="desserts" aria-pressed="false">Desserts</button>
+            <button class="menu-filter" type="button" data-menu-filter="boissons" aria-pressed="false">Boissons</button>
+          </div>
+          <div class="menu-grid">
+            <article class="dish-card" data-menu-category="entrees" data-price="2500">
+              <div class="dish-photo photo-one" role="img" aria-label="Bananes plantain dorées et frites, à partager"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Alloco maison</h3><span>2 500 FCFA</span></div>
+                <p>Bananes plantain mûres, frites à la minute, avec oignon et piment frais à part.</p>
+                <span class="dish-tag">À PARTAGER · PIMENT À PART</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="entrees" data-price="4500">
+              <div class="dish-photo photo-four" role="img" aria-label="Brochettes grillées sur un barbecue au charbon"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Brochettes de poulet</h3><span>4 500 FCFA</span></div>
+                <p>Morceaux de poulet marinés puis grillés, servis avec une petite sauce relevée.</p>
+                <span class="dish-tag">CUITES À LA COMMANDE</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="7500">
+              <div class="dish-photo photo-two" role="img" aria-label="Poulet accompagné de riz jaune dans une assiette généreuse"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Poulet braisé & riz</h3><span>7 500 FCFA</span></div>
+                <p>Poulet mariné, grillé à la braise, servi avec du riz et des oignons frais.</p>
+                <span class="dish-tag">PIMENT À PART</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="9500">
+              <div class="dish-photo photo-three" role="img" aria-label="Poisson entier grillé, prêt à être partagé"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Tilapia braisé</h3><span>9 500 FCFA</span></div>
+                <p>Poisson entier braisé, accompagné d’alloco, d’oignons et de sauce pimentée à part.</p>
+                <span class="dish-tag">TAILLE ET PRIX SELON ARRIVAGE</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="6000">
+              <div class="dish-photo photo-six" role="img" aria-label="Assiette de riz coloré, plat généreux à partager"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Atassi</h3><span>6 000 FCFA</span></div>
+                <p>Riz et haricots servis avec du wagasi doré, oignons et piment à part.</p>
+                <span class="dish-tag">PLAT DU PAYS</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="6500">
+              <div class="dish-photo photo-five" role="img" aria-label="Assiette de spécialité cuisinée, servie à partager"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Amiwo & wagasi</h3><span>6 500 FCFA</span></div>
+                <p>Pâte rouge de maïs accompagnée de wagasi doré, oignons et piment à part.</p>
+                <span class="dish-tag">SPÉCIALITÉ BÉNINOISE</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="4500">
+              <div class="dish-photo photo-eleven" role="img" aria-label="Shawarma au bœuf roulé dans un pain plat"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Shawarma au bœuf</h3><span>4 500 FCFA</span></div>
+                <p>Bœuf grillé, crudités et sauce maison roulés dans un pain chaud.</p>
+                <span class="dish-tag">PRÉPARÉ À LA COMMANDE</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="6500">
+              <div class="dish-photo photo-twelve" role="img" aria-label="Pizza ronde garnie de fromage et pepperoni"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Pizza pepperoni</h3><span>6 500 FCFA</span></div>
+                <p>Pâte garnie de sauce tomate, fromage et pepperoni, cuite au four.</p>
+                <span class="dish-tag">FORMAT À CONFIRMER</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="plats" data-price="5000">
+              <div class="dish-photo photo-thirteen" role="img" aria-label="Hamburger garni de laitue, tomate et steak haché"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Hamburger maison</h3><span>5 000 FCFA</span></div>
+                <p>Steak haché, laitue et tomate dans un pain moelleux, avec sauce maison.</p>
+                <span class="dish-tag">PRÉPARÉ À LA COMMANDE</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="desserts" data-price="2000">
+              <div class="dish-photo photo-seven" role="img" aria-label="Ananas frais, découpé pour terminer le repas"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Ananas frais du marché</h3><span>2 000 FCFA</span></div>
+                <p>Ananas découpé à la demande, servi frais après les braises.</p>
+                <span class="dish-tag">FRUIT DE SAISON</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="desserts" data-price="2500">
+              <div class="dish-photo photo-eight" role="img" aria-label="Bol frais de dessert au yaourt et aux fruits"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Dégué frais</h3><span>2 500 FCFA</span></div>
+                <p>Yaourt frais et grains de mil, servi bien frais quand il est disponible.</p>
+                <span class="dish-tag">DISPONIBILITÉ À CONFIRMER</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="boissons" data-price="1500">
+              <div class="dish-photo photo-nine" role="img" aria-label="Boisson fraîche maison servie avec des agrumes"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Bissap glacé</h3><span>1 500 FCFA</span></div>
+                <p>Infusion d’hibiscus maison, fraîche et légèrement acidulée.</p>
+                <span class="dish-tag">SANS ALCOOL</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="boissons" data-price="1500">
+              <div class="dish-photo photo-ten" role="img" aria-label="Jus d’orange avec citrons tranchés et gingembre"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Jus citron-gingembre</h3><span>1 500 FCFA</span></div>
+                <p>Jus frais aux agrumes et gingembre, servi bien frais.</p>
+                <span class="dish-tag">SANS ALCOOL</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+            <article class="dish-card" data-menu-category="boissons" data-price="2000">
+              <div class="dish-photo photo-fourteen" role="img" aria-label="Boisson à l’ananas versée dans un verre"></div>
+              <div class="dish-info">
+                <div class="dish-title"><h3>Jus d’ananas frais</h3><span>2 000 FCFA</span></div>
+                <p>Jus d’ananas servi frais, selon la disponibilité du fruit.</p>
+                <span class="dish-tag">SANS ALCOOL · FRUIT DE SAISON</span>
+                <button class="button button-outline add-to-cart" type="button" data-add-to-cart>Ajouter au panier</button>
+              </div>
+            </article>
+          </div>
+          <p class="menu-note">Carte et prix fictifs. Pour les allergènes, les traces éventuelles ou une adaptation, demandez confirmation à l’équipe avant de commander.</p>
+          <div class="menu-cta"><a class="button button-outline" href="#commande">Voir mon panier (<span id="menu-cart-count">0</span>) <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+
+      <section class="order-section section-pad" id="commande">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">  À emporter ou en livraison</p>
+            <h2>Votre commande,<br /><em>en quelques étapes.</em></h2>
+            <p>Ajoutez vos choix au panier, indiquez vos coordonnées et envoyez la demande au restaurant sur WhatsApp.</p>
+          </div>
+          <div class="order-layout">
+            <section class="cart-panel" aria-labelledby="cart-title">
+              <div class="order-panel-heading">
+                <div>
+                  <p class="eyebrow">  Votre sélection</p>
+                  <h3 id="cart-title">Mon panier</h3>
+                </div>
+                <span class="cart-count" id="cart-count" aria-live="polite">0 article</span>
+              </div>
+              <p class="cart-empty" id="cart-empty">Votre panier est vide. Ajoutez un plat ou une boisson depuis la carte.</p>
+              <div class="cart-items" id="cart-items" aria-live="polite"></div>
+              <div class="cart-total">
+                <span>Sous-total estimé</span>
+                <strong id="cart-total">0 FCFA</strong>
+              </div>
+              <p class="cart-disclaimer">Les prix affichés sont fictifs. Les frais de livraison éventuels et le total définitif seront confirmés par le restaurant. Vous pourrez télécharger le récapitulatif pour l’imprimer ou l’enregistrer en PDF.</p>
+            </section>
+
+            <form class="order-form" id="order-form">
+              <div class="order-panel-heading">
+                <div>
+                  <p class="eyebrow"> Informations de contact</p>
+                  <h3>Où souhaitez-vous recevoir votre commande ?</h3>
+                </div>
+              </div>
+              <label>
+                Votre nom
+                <input name="name" autocomplete="name" placeholder="Ex. Amina" required />
+              </label>
+              <label>
+                Votre numéro de téléphone
+                <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ex. +229 01 41 87 18 19" required />
+              </label>
+              <label>
+                Mode de réception
+                <select name="fulfillment" id="fulfillment" required>
+                  <option value="">Choisir un mode</option>
+                  <option value="pickup">Retrait au restaurant</option>
+                  <option value="delivery">Livraison</option>
+                </select>
+              </label>
+              <label>
+                Date souhaitée
+                <input name="date" id="order-date" type="date" required />
+              </label>
+              <label>
+                Heure souhaitée
+                <select name="time" id="order-time" required disabled>
+                  <option value="">Choisissez d’abord une date</option>
+                </select>
+              </label>
+              <div class="fulfillment-details" id="delivery-address-field" hidden>
+                <label for="delivery-address">Adresse de livraison et repère</label>
+                <textarea id="delivery-address" name="address" rows="3" placeholder="Quartier, rue, bâtiment, couleur de porte ou autre repère" autocomplete="street-address"></textarea>
+                <button class="location-button" id="share-location" type="button">Partager ma position GPS <span aria-hidden="true">⌖</span></button>
+                <p class="location-status" id="location-status" aria-live="polite">Vous pouvez décrire le lieu ou partager votre position. Le lien GPS sera inclus dans le message WhatsApp.</p>
+              </div>
+              <div class="fulfillment-details pickup-location" id="pickup-location" hidden>
+                <strong>Point de retrait</strong>
+                <p>Maison Naya · 12 rue des Flamboyants, Haie Vive, Cotonou <span>(adresse fictive de démonstration)</span></p>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Haie+Vive+Cotonou+B%C3%A9nin" target="_blank" rel="noopener noreferrer">Voir le quartier sur Google Maps <span aria-hidden="true">↗</span></a>
+              </div>
+              <label>
+                Instructions (facultatif)
+                <textarea name="notes" rows="3" placeholder="Précisions sur votre commande"></textarea>
+              </label>
+              <button class="button button-dark order-submit" id="order-submit" type="submit" disabled>Préparer ma demande sur WhatsApp <span aria-hidden="true">↗</span></button>
+              <p class="order-status" id="order-status" aria-live="polite">Ajoutez au moins un article pour continuer.</p>
+              <a class="order-fallback" id="order-whatsapp-fallback" target="_blank" rel="noopener noreferrer" hidden>Ouvrir WhatsApp manuellement <span aria-hidden="true">↗</span></a>
+              <button class="button button-outline order-download" id="order-download" type="button" hidden>Télécharger / imprimer le récapitulatif PDF <span aria-hidden="true">↓</span></button>
+              <p class="order-note">Créneaux horaires fictifs, à confirmer. Aucun paiement en ligne. La position n’est partagée qu’après votre clic et votre autorisation. La commande, le délai et les frais de livraison restent à confirmer par le restaurant.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section" id="experience">
+        <img
+          src="https://images.unsplash.com/photo-1739484151190-e2a73842ca13?auto=format&fit=crop&w=2000&q=85"
+          alt="Des poissons grillent sur un barbecue au charbon"
+          loading="lazy"
+        />
+        <div class="quote-overlay"></div>
+        <div class="quote-content shell">
+          <p class="eyebrow eyebrow-light">  L’expérience Naya</p>
+          <blockquote>« Le meilleur ingrédient,<br />c’est le plaisir d’être ensemble. »</blockquote>
+          <p>Une cuisine sincère, un accueil attentionné, et toujours une place autour de la table.</p>
+        </div>
+      </section>
+
+      <section class="experience section-pad">
+        <div class="shell experience-grid">
+          <div class="experience-photo-wrap">
+            <img
+              class="experience-photo"
+              src="https://images.unsplash.com/photo-1681936489933-743255b50a7a?auto=format&fit=crop&w=1100&q=85"
+              alt="Des convives réunis autour d’un repas à partager"
+              loading="lazy"
+            />
+            <div class="experience-stamp"><span>LE GOÛT</span><b>DU</b><span>PARTAGE</span></div>
+          </div>
+          <div class="experience-copy">
+            <p class="eyebrow">  Plus qu’un repas</p>
+            <h2>On vient pour<br />les saveurs.<br /><em>On revient pour l’accueil.</em></h2>
+            <p>
+              Un déjeuner entre collègues, un dîner en famille ou une occasion à célébrer : notre
+              équipe vous accueille avec attention et simplicité.
+            </p>
+            <ul class="check-list">
+              <li><span aria-hidden="true">✳</span> Une cuisine inspirée et préparée avec soin</li>
+              <li><span aria-hidden="true">✳</span> Un cadre agréable pour vos moments importants</li>
+              <li><span aria-hidden="true">✳</span> Un accueil pensé pour que chacun se sente bien</li>
+            </ul>
+            <a class="text-link" href="#reservation">Organiser votre visite <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit-section section-pad" id="visite">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">  À bientôt à la maison</p>
+            <h2>Votre prochaine<br /><em>belle soirée commence ici.</em></h2>
+          </div>
+          <div class="visit-grid">
+            <div class="visit-image">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=85"
+                alt="Intérieur accueillant d’un restaurant contemporain"
+                loading="lazy"
+              />
+            </div>
+            <div class="visit-details">
+              <div class="visit-item">
+                <span class="visit-icon" aria-hidden="true">⌖</span>
+                <div><h3>Nous trouver</h3><p>Adresse fictive : 12 rue des Flamboyants<br />Quartier Haie Vive, Cotonou</p></div>
+              </div>
+              <div class="visit-item">
+                <span class="visit-icon" aria-hidden="true">◷</span>
+                <div><h3>Nos horaires fictifs</h3><p>Mardi–dimanche : 11 h 30–14 h 30<br />et 18 h 30–22 h · Lundi fermé</p></div>
+              </div>
+              <div class="visit-item">
+                <span class="visit-icon" aria-hidden="true">✆</span>
+                <div><h3>Nous contacter</h3><p>+229 01 41 87 18 19<br />Appelez-nous ou écrivez-nous sur WhatsApp</p></div>
+              </div>
+              <a class="button button-outline directions-link" href="https://www.google.com/maps/search/?api=1&query=Haie+Vive+Cotonou+B%C3%A9nin" target="_blank" rel="noopener noreferrer">Voir le quartier sur la carte <span aria-hidden="true">↗</span></a>
+              <a class="button button-dark" href="#reservation">Réserver votre table <span aria-hidden="true">↗</span></a>
+              <p class="details-note">Adresse et horaires inventés pour la maquette. Le lien indique le quartier, pas l’emplacement exact du restaurant.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation-section" id="reservation">
+        <div class="shell reservation-grid">
+          <div>
+            <p class="eyebrow eyebrow-light"> Gardons une place pour vous</p>
+            <h2>Un moment à partager ?<br /><em>Réservons votre table.</em></h2>
+            <p>Choisissez une date, un créneau et le nombre de personnes. Votre demande sera préparée dans WhatsApp et devra être envoyée puis confirmée par l’équipe.</p>
+          </div>
+          <form class="reservation-form" id="reservation-form">
+            <label>
+              Votre nom
+              <input name="name" autocomplete="name" placeholder="Ex. Amina" required />
+            </label>
+            <label>
+              Votre numéro de téléphone
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ex. +229 01 41 87 18 19" required />
+            </label>
+            <div class="form-row">
+              <label>
+                Date souhaitée
+                <input name="date" type="date" required />
+              </label>
+              <label>
+                Heure
+                <select name="time" required>
+                  <option value="">Choisir une date d’abord</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Nombre de personnes
+              <select name="guests" required>
+                <option value="">Choisir</option>
+                <option>1 personne</option><option>2 personnes</option><option>3 personnes</option>
+                <option>4 personnes</option><option>5 personnes</option><option>6 personnes</option>
+              </select>
+            </label>
+            <label>
+              Occasion
+              <select name="occasion">
+                <option value="">Aucune occasion particulière</option>
+                <option>Anniversaire</option>
+                <option>Repas en famille</option>
+                <option>Rendez-vous professionnel</option>
+                <option>Célébration</option>
+                <option>Autre occasion</option>
+              </select>
+            </label>
+            <label>
+              Préférence de placement (selon disponibilité)
+              <select name="seating">
+                <option value="">Aucune préférence</option>
+                <option>Table calme</option>
+                <option>Près d’une fenêtre</option>
+                <option>À l’intérieur</option>
+                <option>En terrasse, si disponible</option>
+              </select>
+            </label>
+            <fieldset class="reservation-preorder">
+              <legend>Souhaitez-vous que l’équipe prépare des plats à l’avance ? <span>(facultatif)</span></legend>
+              <p>Choisissez les plats et quantités souhaités. L’équipe vérifiera leur disponibilité et vous les confirmera.</p>
+              <div class="preorder-options" id="reservation-menu-options"></div>
+            </fieldset>
+            <label>
+              Allergies, régimes alimentaires ou autres précisions
+              <textarea name="notes" rows="3" placeholder="Précisez votre demande ; l’équipe devra confirmer ce qu’elle peut proposer."></textarea>
+            </label>
+            <button class="button button-gold form-submit" type="submit">Préparer ma demande <span aria-hidden="true">→</span></button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+            <a class="reservation-fallback" id="reservation-whatsapp-fallback" target="_blank" rel="noopener noreferrer" hidden>Ouvrir WhatsApp manuellement <span aria-hidden="true">↗</span></a>
+            <button class="button button-outline reservation-download" id="reservation-download" type="button" hidden>Télécharger le récapitulatif <span aria-hidden="true">↓</span></button>
+            <div class="request-preview" id="request-preview" hidden>
+              <strong>Aperçu de la demande (non envoyé)</strong>
+              <p id="request-preview-content"></p>
+            </div>
+            <p class="form-note">Horaires fictifs : mardi–dimanche, 11 h 30–14 h 30 et 18 h 30–22 h. Le lundi est fermé. Les plats, préférences et créneaux sont des demandes à confirmer ; le récapitulatif téléchargé ne constitue pas une réservation confirmée. Signalez toute allergie à l’équipe, qui devra confirmer les ingrédients et les risques de traces.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <a class="brand brand-footer" href="#accueil">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>MAISON <b>NAYA</b><small>CUISINE & HOSPITALITÉ</small></span>
+        </a>
+        <p>Une table de goût, de partage et de belles rencontres.</p>
+        <div class="footer-links">
+          <a href="#histoire">La maison</a><a href="#menu">La carte</a><a href="#visite">Nous trouver</a>
+        </div>
+        <a class="back-top" href="#accueil">Retour en haut ↑</a>
+      </div>
+      <div class="footer-bottom shell">
+        <span>© <span id="year"></span> Maison Naya. Tous droits réservés.</span>
+        <span>Site modèle réalisé par AfriTech Elite</span>
+      </div>
+    </footer>
+  </body>
+</html>

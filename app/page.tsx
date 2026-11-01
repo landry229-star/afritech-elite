@@ -22,34 +22,53 @@ const sectors = [
 
 const portfolio = [
   {
+    kind: "boutique",
+    category: "Modèle de démonstration · Commerce",
+    title: "Boutique et commerce",
+    description: "Catalogue filtrable, sélection de produits et demande de commande à confirmer par la boutique.",
+    href: "/modeles/boutique/index.html",
+  },
+  {
+    kind: "clinique",
+    category: "Modèle de démonstration · Santé",
+    title: "Clinique et cabinet",
+    description: "Présentation des services, de l’équipe et des informations pratiques du centre.",
+    href: "/modeles/clinique/index.html",
+  },
+  {
+    kind: "ecole",
+    category: "Modèle de démonstration · Éducation",
+    title: "École et formation",
+    description: "Présentation des parcours, admissions et renseignements destinés aux familles.",
+    href: "/modeles/ecole/index.html",
+  },
+  {
+    kind: "hotel",
+    category: "Modèle de démonstration · Hébergement",
+    title: "Hôtel et auberge",
+    description: "Mise en valeur des chambres, services, informations pratiques et demandes de séjour.",
+    href: "/modeles/hotel/index.html",
+  },
+  {
+    kind: "immobilier",
+    category: "Modèle de démonstration · Immobilier",
+    title: "Agence immobilière",
+    description: "Présentation de biens, filtres de recherche et demandes d’information ou de visite.",
+    href: "/modeles/immobilier/index.html",
+  },
+  {
+    kind: "pharmacie",
+    category: "Modèle de démonstration · Santé",
+    title: "Pharmacie",
+    description: "Informations sur la pharmacie, ses services, ses horaires et ses coordonnées.",
+    href: "/modeles/pharmacie/index.html",
+  },
+  {
     kind: "restaurant",
-    category: "Concept de démonstration · Restaurant",
-    title: "Une table accueillante, un menu à portée de main",
-    description: "Une page d’accueil chaleureuse avec accès rapide au menu, aux horaires et aux réservations.",
-    details: ["Menu mis en avant", "Horaires et localisation", "Contact pour réserver"],
-    previewTitle: "La table du quartier",
-    previewText: "Des produits choisis. Une cuisine généreuse.",
-    previewAction: "DÉCOUVRIR LE MENU",
-  },
-  {
-    kind: "cabinet",
-    category: "Concept de démonstration · Santé",
-    title: "Rendre les informations de santé faciles à trouver",
-    description: "Un aperçu sobre pour présenter les soins, l’équipe, les horaires et les modalités de contact.",
-    details: ["Présentation des soins", "Informations pratiques", "Demande de rendez-vous"],
-    previewTitle: "Votre santé, notre attention",
-    previewText: "Une équipe à votre écoute, près de chez vous.",
-    previewAction: "NOS SERVICES",
-  },
-  {
-    kind: "beaute",
-    category: "Concept de démonstration · Beauté",
-    title: "Mettre en valeur les prestations et le savoir-faire",
-    description: "Une vitrine élégante pour présenter les prestations, les réalisations et les demandes de rendez-vous.",
-    details: ["Prestations présentées clairement", "Espace réalisations", "Contact en quelques clics"],
-    previewTitle: "Le soin jusque dans le détail",
-    previewText: "Beauté, bien-être et gestes personnalisés.",
-    previewAction: "VOIR LES PRESTATIONS",
+    category: "Modèle de démonstration · Restauration",
+    title: "Restaurant",
+    description: "Carte, réservation et demande de commande avec informations à confirmer par le restaurant.",
+    href: "/modeles/restaurant/index.html",
   },
 ];
 
@@ -154,7 +173,7 @@ const questions = [
   {
     question: "Pouvez-vous créer un site pour mon métier ?",
     answer:
-      "Oui. Les métiers affichés sont des exemples ; nous pouvons échanger sur votre activité, vos besoins et les informations que vous souhaitez présenter.",
+      "Oui. Des modèles de démonstration sont disponibles pour les boutiques, cliniques et cabinets, écoles, hôtels, agences immobilières, pharmacies et restaurants. Ils sont à personnaliser avec vos informations réelles ; ce ne sont pas des sites clients déjà livrés. Pour un autre métier, nous pouvons aussi échanger sur vos besoins.",
   },
   {
     question: "Pour quelles classes proposez-vous les cours de mathématiques ?",
@@ -393,38 +412,26 @@ export default function Home() {
             <div className="section-heading">
               <p className="eyebrow">Aperçus de sites</p>
               <h2>Imaginez votre activité en ligne</h2>
-              <p>Quelques concepts fictifs pour illustrer la création de sites web adaptés à différents métiers.</p>
+              <p>Explorez des modèles interactifs conçus pour différents métiers.</p>
             </div>
             <p className="portfolio-disclaimer">
-              Ces aperçus sont des concepts fictifs créés pour illustrer l’offre. Ce ne sont pas des sites clients ni des réalisations livrées.
+              Ce sont des démonstrations : noms, coordonnées, tarifs, disponibilités et contenus sont fictifs ou à vérifier. Les demandes dans ces modèles ne constituent pas une commande, une réservation ou un rendez-vous confirmé.
             </p>
             <div className="grid portfolio-grid">
               {portfolio.map((project) => (
                 <article className="portfolio-card" key={project.kind}>
-                  <div className={`portfolio-preview preview-${project.kind}`} role="img" aria-label={`Aperçu conceptuel de site : ${project.category}`}>
-                    <div className="preview-browser">
-                      <span /><span /><span />
-                      <i>exemple-site.fr</i>
-                    </div>
-                    <div className="preview-page">
-                      <div className="preview-nav"><b>{project.previewTitle.split(" ")[0]}</b><span>ACCUEIL　 SERVICES　 CONTACT</span></div>
-                      <div className="preview-hero">
-                        <small>BIENVENUE</small>
-                        <strong>{project.previewTitle}</strong>
-                        <span>{project.previewText}</span>
-                        <em>{project.previewAction}</em>
-                      </div>
-                      <div className="preview-columns"><span /><span /><span /></div>
-                    </div>
-                  </div>
                   <div className="portfolio-copy">
                     <p className="portfolio-category">{project.category}</p>
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
-                    <ul>
-                      {project.details.map((detail) => <li key={detail}>{detail}</li>)}
-                    </ul>
-                    <a className="text-link" href="#contact">Imaginer mon site →</a>
+                    <a
+                      className="button button-secondary portfolio-demo-link"
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Voir le modèle <span aria-hidden="true">↗</span>
+                    </a>
                   </div>
                 </article>
               ))}

@@ -1,0 +1,178 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+:root {
+  --muted: #4f554f;
+}
+
+.eyebrow,
+.hero-small-note,
+.hero-photo-label span,
+.product-category,
+.formation-category,
+.order-disclaimer,
+.property-location,
+.room-type,
+.room-label,
+.property-status {
+  font-size: max(0.85rem, 0.92em) !important;
+}
+
+.brand small {
+  font-size: 0.75rem !important;
+}
+
+:is(
+  .demo-banner,
+  a:not(.brand),
+  button,
+  input,
+  select,
+  textarea,
+  .nav-links > a:not(.button),
+  .button,
+  .nav-cta,
+  .nav-book,
+  .hero-text-link,
+  .hero-note p,
+  .hero-footnote,
+  .hero-signature,
+  .hero-detail p,
+  .hero-bottom,
+  .trust-inner,
+  .benefit-inner,
+  .filter-button,
+  .sort-control,
+  .product-label,
+  .product-category,
+  .product-info > p:not(.product-category),
+  .add-button,
+  .catalog-disclaimer,
+  .order-disclaimer,
+  .cart-empty,
+  .cart-item,
+  .cart-total,
+  .cart-note,
+  .visit-detail p,
+  .visit-note,
+  .room-label,
+  .room-type,
+  .room-info > p,
+  .room-amenities,
+  .service-card p,
+  .service-card small,
+  .demo-disclaimer,
+  .details-note,
+  .property-location,
+  .property-description,
+  .property-features,
+  .process-list p,
+  .contact-form label,
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .form-note,
+  .form-status,
+  .footer-links a,
+  .footer-bottom,
+  .formation-meta,
+  .formation-info > p:not(.formation-category),
+  .formation-disclaimer,
+  .contact-detail p,
+  .privacy-note,
+  .specialty-card p,
+  .specialty-card > a,
+  .specialty-disclaimer,
+  .practical-disclaimer,
+  .practical-card p,
+  .practical-card small,
+  .journey-grid p,
+  .notice-section .notice-inner > div > p:last-child,
+  .contact-form > p:not(.form-note):not(.form-status),
+  .info-card p,
+  .info-card small,
+  .info-disclaimer,
+  .health-note .health-inner > div > p:last-child,
+  .service-disclaimer,
+  .guard-alert p,
+  .contact-note,
+  .section-heading > p:last-child,
+  .intro-copy,
+  .service-card > a,
+  .admission-grid p,
+  .practical-grid p,
+  .practical-grid small,
+  .contact-copy > p:not(.eyebrow):not(.privacy-note),
+  .contact-detail p,
+  .order-form label,
+  .reservation-form label,
+  .reservation-preorder legend,
+  .reservation-preorder legend span,
+  .reservation-preorder > p,
+  .preorder-dish,
+  .form-status,
+  .request-preview p,
+  .footer-links a,
+  .back-top,
+  .dish-info > p,
+  .menu-note,
+  .cart-disclaimer,
+  .order-note,
+  .location-status,
+  .pickup-location p,
+  .pickup-location p span,
+  .pickup-location a,
+  .order-status,
+  .check-list,
+  .contact-line,
+  .sort-control select
+) {
+  font-size: max(0.85rem, 0.92em) !important;
+}
+
+.footer-links a,
+.footer-bottom,
+.back-top {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.hero-footnote,
+.hero-signature,
+.hero-detail p,
+.hero-bottom,
+.hero-text-link,
+.reservation-form .form-note,
+.reservation-form .form-status {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.afritech-return {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 8px max(20px, calc((100% - 1180px) / 2));
+  background: #233a5c;
+}
+
+.afritech-return a {
+  color: #fff;
+  font: 600 0.9rem/1.4 Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.afritech-return a:hover,
+.afritech-return a:focus-visible {
+  text-decoration: underline;
+}
+
+.afritech-return a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
